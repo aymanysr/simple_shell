@@ -11,7 +11,7 @@ int main(int ac, char **argv)
 {
 	char *line = NULL;
 	char **command = NULL;
-	int status = 0;
+	int status = 0, i = 0;
 
 	/* Ignore the argument count */
 	(void)ac;
@@ -32,6 +32,7 @@ int main(int ac, char **argv)
 			/* Return the last command's status */
 			return (status);
 		}
+		i++;
 
 		/* Tokenize the line into an array of words */
 		command = tokenizer(line);
@@ -41,6 +42,6 @@ int main(int ac, char **argv)
 			continue;
 
 		/* Execute the command and store its exit status */
-		status = _execute(command, argv);
+		status = _execute(command, argv, i);
 	}
 }
