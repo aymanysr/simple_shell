@@ -17,7 +17,7 @@
 <p>To use the simple shell, follow these steps:</p>
 <p>Compile the program: gcc -o simple_shell *.c</p>
 <p>Run the shell: ./simple_shell</p>
-<p>Example</p>
+<h2>Example</h2>
 <p>bash</p> 
 <p>Copy code</p>
 <p>$ ./simple_shell</p>
