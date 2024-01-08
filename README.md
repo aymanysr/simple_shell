@@ -1,33 +1,35 @@
-Simple Shell
-This is a basic UNIX command line interpreter, a simple shell, developed as part of a project. The shell supports basic functionality such as displaying a prompt, executing commands, handling errors, and more.
+<h1>Simple Shell</h1>
+<p>This is a basic UNIX command line interpreter, a simple shell, developed as part of a project. The shell supports basic functionality such as displaying a prompt, executing commands, handling errors, and more.</p>
+  
+<h2>Features</h2>
+<ul>
+  <li>Display a prompt and wait for the user to type a command.</li>
+  <li>Commands are single words, and a command line always ends with a new line.</li>
+  <li>Prompt is displayed again after each command execution.</li>
+  <li>Handles errors and displays an error message if an executable cannot be found.</li>
+  <li>Handles "end of file" condition (Ctrl+D).</li>
+  <li>Extends functionality to handle command lines with arguments.</li>
+  <li>Further extends functionality to handle the PATH.</li>
+  <li>fork is not called if the command doesn't exist.</li>
+</ul>
 
-Features
+<h2>Usage</h2>
+<p>To use the simple shell, follow these steps:</p>
+<p>Compile the program: gcc -o simple_shell *.c</p>
+<p>Run the shell: ./simple_shell</p>
+<p>Example</p>
+<p>bash</p> 
+<p>Copy code</p>
+<p>$ ./simple_shell</p>
+<p>$ ls</p>
+<p>file1 file2 file3</p>
+<p>$ echo Hello, World!</p>
+<p>Hello, World!</p>
+<p>$ exit</p> 
+<p>$</p> 
 
-Display a prompt and wait for the user to type a command.
-Commands are single words, and a command line always ends with a new line.
-Prompt is displayed again after each command execution.
-Handles errors and displays an error message if an executable cannot be found.
-Handles "end of file" condition (Ctrl+D).
-Extends functionality to handle command lines with arguments.
-Further extends functionality to handle the PATH.
-fork is not called if the command doesn't exist.
+<h2>Notes</h2>
+<p>The shell does not implement built-ins or handle special characters.</p>
+<p>The cursor cannot be moved, and commands with arguments are not supported.</p>
+<p>The execve function is used as the core part of the shell, passing the environ variable.</p> 
 
-Usage
-To use the simple shell, follow these steps:
-
-Compile the program: gcc -o simple_shell *.c
-Run the shell: ./simple_shell
-Example
-bash
-Copy code
-$ ./simple_shell
-$ ls
-file1 file2 file3
-$ echo Hello, World!
-Hello, World!
-$ exit
-$
-Notes
-The shell does not implement built-ins or handle special characters.
-The cursor cannot be moved, and commands with arguments are not supported.
-The execve function is used as the core part of the shell, passing the environ variable.
